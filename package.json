@@ -1,0 +1,27 @@
+{
+  "name": "submoduleSync",
+  "version": "1.0.0",
+  "description": "This is used to sync submodules with module of a branch ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "updateSubmodule": "sh update-submodule.sh",
+    "lint": "eslint .",
+    "precommit-msg":"echo 'Pre-commit checks... !!!' "
+  },
+  "precommit":["precommit-msg","updateSubmodule"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anchaljain123/main-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anchaljain123/mainrepo/issues"
+  },
+  "homepage": "https://github.com/anchaljain123/main-repo#readme",
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "pre-commit": "^1.2.2"
+  }
+}
