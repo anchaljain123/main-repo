@@ -8,7 +8,7 @@ if [ -z $APP_PATH ]; then
   exit 1;
 fi
 
-BRANCH=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/")
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [ -z $BRANCH ]; then
   echo "Missing 2nd argument (branch name)";
